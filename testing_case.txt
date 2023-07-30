@@ -1,0 +1,84 @@
+1 John 408440037 A John555@gmail.com 910038592
+2 Mary 408440090 A Mary7733@yahoo.com.tw 910087654
+3 Johnson 406440097 B Johnson0981@csie.io 910078642
+4 Jennie 408440027 B Jennie666@gmail.com 910078365
+5 Jerry 408440026 A Jerry945@gmail.com 910087638
+6 Amy 406440093 A Amy999@cs.ccu.edu.tw 910038572
+DELETE FROM tableA WHERE ID >= 5 OR Phone > 910080000 OR Phone > 910010000 OR StudentID > 405440000;
+DELETE FROM tableA WHERE ID = 4 AND Phone > 910000000 AND Phone > 910010000;
+SELECT * FROM tableA;
+SELECT * FROM tableA WHERE ID >= 2 AND StudentID > 405440000 AND Phone > 910010000;
+
+1 John 408440037 A John555@gmail.com 910038592
+2 Mary 408440090 A Mary7733@yahoo.com.tw 910087654
+3 Johnson 406440097 B Johnson0981@csie.io 910078642
+4 Jennie 408440027 B Jennie666@gmail.com 910078365
+5 Jerry 403440026 A Jerry945@gmail.com 910080000
+6 Amy 406440093 A Amy999@cs.ccu.edu.tw 910038572
+DELETE FROM tableA WHERE ID >= 5 AND Phone != 910080000;
+DELETE FROM tableA WHERE ID != 4 AND StudentID < 404000000;
+SELECT * FROM tableA WHERE ID != 3;
+
+6 3
+1 John 408440037 A John555@gmail.com 910038592
+2 Mary 408440090 A Mary7733@yahoo.com.tw 910087654
+3 Johnson 406440097 B Johnson0981@csie.io 910078642
+4 Jennie 408440027 B Jennie666@gmail.com 910078365
+5 Jerry 403440026 A Jerry945@gmail.com 910080000
+6 Amy 406440093 A Amy999@cs.ccu.edu.tw 910038572
+DELETE FROM tableA WHERE ID >= 5 AND Phone != 910080000;
+DELETE FROM tableA WHERE ID != 4 AND StudentID < 404000000;
+SELECT * FROM tableA WHERE ID != 3;
+1 John 408440037 A John555@gmail.com 910038592
+2 Mary 408440090 A Mary7733@yahoo.com.tw 910087654
+4 Jennie 408440027 B Jennie666@gmail.com 910078365
+6 Amy 406440093 A Amy999@cs.ccu.edu.tw 910038572  DELETE完後在DELETE會有邏輯謬誤
+
+
+6 2
+1 John 408440037 A John555@gmail.com 910038592
+2 Mary 408440090 A Mary7733@yahoo.com.tw 910087654
+3 Johnson 406440097 B Johnson0981@csie.io 910078642
+4 Jennie 408440027 B Jennie666@gmail.com 910078365
+5 Jerry 403440026 A Jerry945@gmail.com 910080000
+6 Amy 406440093 A Amy999@cs.ccu.edu.tw 910038572
+SELECT * FROM tableA WHERE ID >= 2 OR StudentID > 405440000 OR Phone > 910010000 OR Email LIKE "%gmail.com";
+DELETE FROM tableA WHERE ID >= 5 OR Email LIKE "%gmail.com" OR ID = 3 OR ID = 5;
+SELECT * FROM tableA WHERE ID != 3; 
+DELETE FROM tableA WHERE ID = 5;
+SELECT * FROM tableA;
+DELETE FROM tableA;
+1658
+
+6 2
+1 John 408440037 A John555@gmail.com 910038592
+2 Mary 408440090 A Mary7733@yahoo.com.tw 910087654
+3 Johnson 406440097 B Johnson0981@csie.io 910078642
+4 Jennie 408440027 B Jennie666@gmail.com 910078365
+5 Jerry 403440026 A Jerry945@gmail.com 910080000
+6 Amy 406440093 A Amy999@cs.ccu.edu.tw 910038572
+SELECT * FROM tableA;
+DELETE FROM tableA WHERE Email LIKE "%gmail.com" OR ID = 7 OR Class LIKE "A";
+SELECT * FROM tableA;
+DELETE FROM tableA WHERE ID >= 5 OR Phone > 910080000;
+
+DELETE FROM tableA WHERE Email LIKE "%.com.tw" OR Name LIKE "%J" OR Class LIKE "B";
+SELECT * FROM tableA;
+DELETE FROM tableA WHERE Email LIKE "%gmail.com" AND ID >= 5 AND ID = 5 AND ID = 5;
+DELETE FROM tableA WHERE Email LIKE "%gmail.com" AND ID = 4;
+
+
+
+6 2
+1 John 408440037 A John555@gmail.com 910038592
+2 Mary 408440090 A Mary7733@yahoo.com.tw 910087654
+3 Johnson 406440097 B Johnson0981@csie.io 910078642
+4 Jennie 408440027 B Jennie666@gmail.com 910078365
+5 Jerry 408440026 A Jerry945@gmail.com 910087638
+6 Amy 406440093 A Amy999@cs.ccu.edu.tw 910038572
+DELETE FROM tableA WHERE ID >= 5 OR Phone > 910080000;
+SELECT Name, Class, StudentID FROM tableA WHERE StudentID >= 408440000 AND Email LIKE "%gmail.com" AND Class LIKE "A" ORDER BY Phone DESC;
+
+
+
+
